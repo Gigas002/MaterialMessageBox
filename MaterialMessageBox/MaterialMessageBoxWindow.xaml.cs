@@ -9,7 +9,7 @@ using System.Windows.Media;
 namespace MaterialMessageBox
 {
     /// <summary>
-    /// Interaction logic for MessageBoxWindow.xaml
+    /// Interaction logic for MaterialMessageBoxWindow.xaml
     /// </summary>
     public partial class MaterialMessageBoxWindow
     {

@@ -40,6 +40,7 @@ namespace Demo
             {
                 MessageTextBlock = { Text = "Do you like white wine?", Foreground = Brushes.White },
                 OkButton = { Content = "Yes" }, CancelButton = { Content = "Noooo" },
+                BordersGrid = { Background = Brushes.Blue },
                 MainGrid = { Background = Brushes.Red }, BorderBrush = Brushes.BlueViolet,
                 BorderThickness = new Thickness(4, 4, 4, 4)
             };

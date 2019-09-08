@@ -1,52 +1,55 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Media;
 using MaterialDesignThemes.Wpf;
+
+// ReSharper disable InheritdocConsiderUsage
+// ReSharper disable ClassCanBeSealed.Global
+// ReSharper disable MemberCanBeInternal
 
 namespace MaterialMessageBox
 {
     /// <summary>
-    /// Interaction logic for MessageBoxUserControl.xaml
+    /// Interaction logic for MaterialMessageBoxUserControl.xaml
     /// </summary>
     public partial class MaterialMessageBoxUserControl
     {
-        public MaterialMessageBoxUserControl()
-        {
-            InitializeComponent();
-        }
+        #region Non-static members
 
+        /// <summary>
+        /// OkButton/CancelButton result.
+        /// </summary>
         public MessageBoxResult Result { get; private set; }
+
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        public MaterialMessageBoxUserControl() => InitializeComponent();
 
         private void OkButton_OnClick(object sender, RoutedEventArgs e)
         {
             Result = MessageBoxResult.OK;
             DialogHost.CloseDialogCommand.Execute(true, null);
         }
+
         private void CancelButton_OnClick(object sender, RoutedEventArgs e)
         {
             Result = MessageBoxResult.Cancel;
             DialogHost.CloseDialogCommand.Execute(false, null);
         }
 
-        private void CopyMessageButton_OnClick(object sender, RoutedEventArgs e)
+        private void CopyToClipboardButton_OnClick(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                Clipboard.SetText(MessageTextBlock.Text);
-            }
+            try { Clipboard.SetText(MessageTextBlock.Text); }
             catch (ArgumentNullException)
             {
                 // ignored
             }
         }
 
+        #endregion
 
-
-
-
+        #region Static methods
 
         /// <summary>
         /// Shows usual message box.
@@ -60,16 +63,6 @@ namespace MaterialMessageBox
         {
             try
             {
-                //using (MessageBoxWindow messageBoxWindow = new MessageBoxWindow())
-                //{
-                //    messageBoxWindow.MessageTextBlock.Text = message;
-                //    messageBoxWindow.CancelButton.Visibility = isCancel ? Visibility.Visible : Visibility.Collapsed;
-                //    messageBoxWindow.FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
-                //    messageBoxWindow.OkButton.Focus();
-                //    messageBoxWindow.ShowDialog();
-                //    return messageBoxWindow.Result == MessageBoxResult.OK ? MessageBoxResult.OK : MessageBoxResult.Cancel;
-                //}
-
                 MaterialMessageBoxUserControl mbc = new MaterialMessageBoxUserControl();
                 mbc.MessageTextBlock.Text = message;
                 mbc.CancelButton.Visibility = isCancel ? Visibility.Visible : Visibility.Collapsed;
@@ -144,5 +137,7 @@ namespace MaterialMessageBox
             return MessageBoxResult.Cancel;
             //}
         }
+
+        #endregion
     }
 }

@@ -28,51 +28,75 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid Name="MainGrid" x:FieldModifier="public">
+    <Grid x:Name="BordersGrid" x:FieldModifier="public">
         <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <!-- Grid Row 0 -->
-        <ScrollViewer Grid.Row="0" Margin="20"
-                      VerticalScrollBarVisibility="Auto">
-            <TextBlock x:Name="MessageTextBlock"
-                       x:FieldModifier="public"
-                       Padding="3"
-                       VerticalAlignment="Top"
-                       MinHeight="100"
-                       Foreground="{DynamicResource MaterialDesignBody}"
-                       Text="Message"
-                       TextWrapping="Wrap"/>
-        </ScrollViewer>
-        <!-- Grid.Row 1 -->
-        <Button x:Name="CopyToClipboardButton"
-                x:FieldModifier="public"
-                Grid.Row="1" Margin="20 0 0 0"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Height="30" Width="30"
-                ToolTip="Copy to Clipboard"
-                Click="CopyToClipboardButton_OnClick"
-                Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
-                Content="{materialDesign:PackIcon ContentCopy}"/>
-        <StackPanel Grid.Row="1" Margin="0 0 0 20"
-                    HorizontalAlignment="Right"
-                    Orientation="Horizontal">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid Name="MainGrid" x:FieldModifier="public"
+              Grid.Row="1"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <!-- Grid Row 0 -->
+            <ScrollViewer Grid.Row="0"
+                          Grid.Column="0"
+                          Grid.ColumnSpan="5"
+                          VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="MessageTextBlock"
+                           x:FieldModifier="public"
+                           VerticalAlignment="Top"
+                           MinHeight="100"
+                           Foreground="{DynamicResource MaterialDesignBody}"
+                           Text="Message"
+                           TextWrapping="Wrap"/>
+            </ScrollViewer>
+            <!-- Grid.Row 1 -->
+            <Button x:Name="CopyToClipboardButton"
+                    x:FieldModifier="public"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Height="30" Width="30"
+                    ToolTip="Copy to Clipboard"
+                    Click="CopyToClipboardButton_OnClick"
+                    Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
+                    Content="{materialDesign:PackIcon ContentCopy}"/>
             <Button x:Name="OkButton"
                     x:FieldModifier="public"
-                    Margin="0 0 20 0"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    VerticalAlignment="Center"
                     HorizontalAlignment="Stretch"
                     Style="{DynamicResource MaterialDesignFlatButton}"
                     Click="OkButton_OnClick"
                     Content="OK"/>
             <Button x:Name="CancelButton"
                     x:FieldModifier="public"
-                    Margin="20 0 0 0"
+                    Grid.Row="2"
+                    Grid.Column="4"
+                    VerticalAlignment="Center"
                     HorizontalAlignment="Stretch"
                     Style="{DynamicResource MaterialDesignFlatButton}"
                     Click="CancelButton_OnClick"
                     Content="CANCEL"/>
-        </StackPanel>
+        </Grid>
     </Grid>
 </Window>
