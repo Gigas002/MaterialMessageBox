@@ -4,6 +4,13 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <LangVersion>preview</LangVersion>
+    <AssemblyVersion>1.0.0.51</AssemblyVersion>
+    <FileVersion>1.0.0.51</FileVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="1.2.1-ci534" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.0.0-ci534" />
+  </ItemGroup>
 
 </Project>

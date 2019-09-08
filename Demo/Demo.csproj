@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyVersion>1.0.0.65</AssemblyVersion>
+    <FileVersion>1.0.0.65</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MaterialMessageBox\MaterialMessageBox.csproj" />
+  </ItemGroup>
+
+</Project>

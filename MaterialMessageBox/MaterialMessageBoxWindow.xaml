@@ -1,0 +1,78 @@
+﻿<Window
+    x:Class="MaterialMessageBox.MaterialMessageBoxWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    Topmost="True"
+    FontSize="14"
+    FontFamily="{DynamicResource MaterialDesignFont}"
+    VerticalAlignment="Center"
+    ResizeMode="NoResize"
+    WindowStyle="None"
+    Background="{DynamicResource MaterialDesignPaper}"
+    WindowStartupLocation="CenterScreen"
+    BorderThickness="0"
+    Width="400"
+    Height="200">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Material Design -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Cyan.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Teal.xaml" />
+                <!-- Controls -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Name="MainGrid" x:FieldModifier="public">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- Grid Row 0 -->
+        <ScrollViewer Grid.Row="0" Margin="20"
+                      VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="MessageTextBlock"
+                       x:FieldModifier="public"
+                       Padding="3"
+                       VerticalAlignment="Top"
+                       MinHeight="100"
+                       Foreground="{DynamicResource MaterialDesignBody}"
+                       Text="Message"
+                       TextWrapping="Wrap"/>
+        </ScrollViewer>
+        <!-- Grid.Row 1 -->
+        <Button x:Name="CopyToClipboardButton"
+                x:FieldModifier="public"
+                Grid.Row="1" Margin="20 0 0 0"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Height="30" Width="30"
+                ToolTip="Copy to Clipboard"
+                Click="CopyToClipboardButton_OnClick"
+                Style="{DynamicResource MaterialDesignFloatingActionMiniButton}"
+                Content="{materialDesign:PackIcon ContentCopy}"/>
+        <StackPanel Grid.Row="1" Margin="0 0 0 20"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+            <Button x:Name="OkButton"
+                    x:FieldModifier="public"
+                    Margin="0 0 20 0"
+                    HorizontalAlignment="Stretch"
+                    Style="{DynamicResource MaterialDesignFlatButton}"
+                    Click="OkButton_OnClick"
+                    Content="OK"/>
+            <Button x:Name="CancelButton"
+                    x:FieldModifier="public"
+                    Margin="20 0 0 0"
+                    HorizontalAlignment="Stretch"
+                    Style="{DynamicResource MaterialDesignFlatButton}"
+                    Click="CancelButton_OnClick"
+                    Content="CANCEL"/>
+        </StackPanel>
+    </Grid>
+</Window>
