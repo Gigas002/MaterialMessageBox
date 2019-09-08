@@ -2,15 +2,15 @@
 
 Library on **.NET Core 3.0** (**preview9**) implementing material design message box in WPF.
 
-Original idea and some code is written by [denpalrius](https://github.com/denpalrius/Material-Message-Box), but I’ve changed some major stuff and decided to make it different repository. Text for message boxes in Demo is taken from [here](https://en.wikipedia.org/wiki/Soviet_Union).
+Original idea and some code is written by [denpalrius](https://github.com/denpalrius/Material-Message-Box), but I’ve changed some major stuff and decided to make it different repository. Text for message boxes in Demo is taken from [here](https://en.wikipedia.org/wiki/Soviet_Union). Icon is taken from [here](https://material.io/resources/icons/?search=message&icon=message&style=baseline).
 
 You can build project in **VS2019** (**16.2.4**+) or in **VSCode** (**1.38.0**+) with [omnisharp-vscode](https://github.com/OmniSharp/omnisharp-vscode) extension (**1.21.2**+).
 
 ![Icon](icon.png)
 
-*todo appveyor badge*
+[![Build status](https://ci.appveyor.com/api/projects/status/iaiarsuu9xlwiu1a?svg=true)](https://ci.appveyor.com/project/Gigas002/materialmessagebox)
 
-## Current version
+##  Current version
 
 *todo releases and nuget badges*
 
