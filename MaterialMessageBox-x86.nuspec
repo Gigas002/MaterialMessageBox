@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
-    <id>MaterialMessageBox</id>
+    <id>MaterialMessageBox-x86</id>
     <version>1.0.0</version>
-    <title>MaterialMessageBox x86</title>
+    <title>MaterialMessageBox-x86</title>
     <authors>Gigas002</authors>
     <owners>Gigas002</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -20,7 +20,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="MaterialMessageBox\bin\Release\MaterialMessageBox.dll" target="lib\NETCoreApp3.0\MaterialMessageBox.dll" />
-    <file src="MaterialMessageBox\bin\Release\MaterialMessageBox.xml" target="lib\NETCoreApp3.0\MaterialMessageBox.xml" />
+    <file src="MaterialMessageBox\bin\Release\netcoreapp3.0\MaterialMessageBox.dll" target="lib\NETCoreApp3.0\MaterialMessageBox.dll" />
+    <file src="MaterialMessageBox\bin\Release\netcoreapp3.0\MaterialMessageBox.xml" target="lib\NETCoreApp3.0\MaterialMessageBox.xml" />
   </files>
 </package>

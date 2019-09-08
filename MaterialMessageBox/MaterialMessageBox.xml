@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MaterialMessageBox</name>
+    </assembly>
+    <members>
+        <member name="T:MaterialMessageBox.MaterialMessageBoxUserControl">
+            <summary>
+            Interaction logic for MaterialMessageBoxUserControl.xaml
+            </summary>
+            <summary>
+            MaterialMessageBoxUserControl
+            </summary>
+        </member>
+        <member name="P:MaterialMessageBox.MaterialMessageBoxUserControl.Result">
+            <summary>
+            OkButton/CancelButton result.
+            </summary>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxUserControl.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxUserControl.ShowAsync(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Shows usual message box.
+            </summary>
+            <param name="message">The message to display.</param>
+            <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+            <para>By default is <see langword="false"/></para></param>
+            <param name="isRightToLeft">(Optional) Is <see cref="T:System.Windows.FlowDirection"/>=<see cref="F:System.Windows.FlowDirection.RightToLeft"/>?
+            <para>By default is <see langword="false"/></para></param>
+            <returns><see cref="T:System.Windows.MessageBoxResult"/>.</returns>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxUserControl.ShowErrorAsync(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Shows error message box.
+            </summary>
+            <param name="message">The error message to display.</param>
+            <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+            <para>By default is <see langword="false"/></para></param>
+            <param name="isRightToLeft">(Optional) Is <see cref="T:System.Windows.FlowDirection"/>=<see cref="F:System.Windows.FlowDirection.RightToLeft"/>?
+            <para>By default is <see langword="false"/></para></param>
+            <returns><see cref="T:System.Windows.MessageBoxResult"/>.</returns>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxUserControl.ShowWarningAsync(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Shows warning message box.
+            </summary>
+            <param name="message">The warning message to display.</param>
+            <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+            <para>By default is <see langword="false"/></para></param>
+            <param name="isRightToLeft">(Optional) Is <see cref="T:System.Windows.FlowDirection"/>=<see cref="F:System.Windows.FlowDirection.RightToLeft"/>?
+            <para>By default is <see langword="false"/></para></param>
+            <returns><see cref="T:System.Windows.MessageBoxResult"/>.</returns>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxUserControl.Show(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Shows usual message box.
+            </summary>
+            <param name="message">The message to display.</param>
+            <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+            <para>By default is <see langword="false"/></para></param>
+            <param name="isRightToLeft">(Optional) Is <see cref="T:System.Windows.FlowDirection"/>=<see cref="F:System.Windows.FlowDirection.RightToLeft"/>?
+            <para>By default is <see langword="false"/></para></param>
+            <returns><see cref="T:System.Windows.MessageBoxResult"/>.</returns>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxUserControl.ShowError(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Shows error message box.
+            </summary>
+            <param name="message">The error message to display.</param>
+            <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+            <para>By default is <see langword="false"/></para></param>
+            <param name="isRightToLeft">(Optional) Is <see cref="T:System.Windows.FlowDirection"/>=<see cref="F:System.Windows.FlowDirection.RightToLeft"/>?
+            <para>By default is <see langword="false"/></para></param>
+            <returns><see cref="T:System.Windows.MessageBoxResult"/>.</returns>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxUserControl.ShowWarning(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Shows warning message box.
+            </summary>
+            <param name="message">The warning message to display.</param>
+            <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+            <para>By default is <see langword="false"/></para></param>
+            <param name="isRightToLeft">(Optional) Is <see cref="T:System.Windows.FlowDirection"/>=<see cref="F:System.Windows.FlowDirection.RightToLeft"/>?
+            <para>By default is <see langword="false"/></para></param>
+            <returns><see cref="T:System.Windows.MessageBoxResult"/>.</returns>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxUserControl.BordersGrid">
+            <summary>
+            BordersGrid Name Field
+            </summary>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxUserControl.MainGrid">
+            <summary>
+            MainGrid Name Field
+            </summary>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxUserControl.MessageTextBlock">
+            <summary>
+            MessageTextBlock Name Field
+            </summary>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxUserControl.CopyToClipboardButton">
+            <summary>
+            CopyToClipboardButton Name Field
+            </summary>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxUserControl.OkButton">
+            <summary>
+            OkButton Name Field
+            </summary>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxUserControl.CancelButton">
+            <summary>
+            CancelButton Name Field
+            </summary>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxUserControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MaterialMessageBox.MaterialMessageBoxWindow">
+            <summary>
+            Interaction logic for MaterialMessageBoxWindow.xaml
+            </summary>
+            <summary>
+            MaterialMessageBoxWindow
+            </summary>
+        </member>
+        <member name="P:MaterialMessageBox.MaterialMessageBoxWindow.Result">
+            <summary>
+            OkButton/CancelButton result.
+            </summary>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxWindow.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxWindow.Show(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Shows usual message box.
+            </summary>
+            <param name="message">The message to display.</param>
+            <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+            <para>By default is <see langword="false"/></para></param>
+            <param name="isRightToLeft">(Optional) Is <see cref="T:System.Windows.FlowDirection"/>=<see cref="F:System.Windows.FlowDirection.RightToLeft"/>?
+            <para>By default is <see langword="false"/></para></param>
+            <returns><see cref="T:System.Windows.MessageBoxResult"/>.</returns>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxWindow.ShowError(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Shows error message box.
+            </summary>
+            <param name="message">The error message to display.</param>
+            <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+            <para>By default is <see langword="false"/></para></param>
+            <param name="isRightToLeft">(Optional) Is <see cref="T:System.Windows.FlowDirection"/>=<see cref="F:System.Windows.FlowDirection.RightToLeft"/>?
+            <para>By default is <see langword="false"/></para></param>
+            <returns><see cref="T:System.Windows.MessageBoxResult"/>.</returns>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxWindow.ShowWarning(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Shows warning message box.
+            </summary>
+            <param name="message">The warning message to display.</param>
+            <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+            <para>By default is <see langword="false"/></para></param>
+            <param name="isRightToLeft">(Optional) Is <see cref="T:System.Windows.FlowDirection"/>=<see cref="F:System.Windows.FlowDirection.RightToLeft"/>?
+            <para>By default is <see langword="false"/></para></param>
+            <returns><see cref="T:System.Windows.MessageBoxResult"/>.</returns>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxWindow.BordersGrid">
+            <summary>
+            BordersGrid Name Field
+            </summary>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxWindow.MainGrid">
+            <summary>
+            MainGrid Name Field
+            </summary>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxWindow.MessageTextBlock">
+            <summary>
+            MessageTextBlock Name Field
+            </summary>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxWindow.CopyToClipboardButton">
+            <summary>
+            CopyToClipboardButton Name Field
+            </summary>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxWindow.OkButton">
+            <summary>
+            OkButton Name Field
+            </summary>
+        </member>
+        <member name="F:MaterialMessageBox.MaterialMessageBoxWindow.CancelButton">
+            <summary>
+            CancelButton Name Field
+            </summary>
+        </member>
+        <member name="M:MaterialMessageBox.MaterialMessageBoxWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

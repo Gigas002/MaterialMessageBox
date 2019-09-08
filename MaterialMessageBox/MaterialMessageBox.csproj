@@ -4,10 +4,18 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <LangVersion>preview</LangVersion>
-    <AssemblyVersion>1.0.0.72</AssemblyVersion>
-    <FileVersion>1.0.0.72</FileVersion>
+    <AssemblyVersion>1.0.0.74</AssemblyVersion>
+    <FileVersion>1.0.0.74</FileVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationIcon></ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\gigas\Documents\Visual Studio 2019\Projects\MaterialMessageBox\MaterialMessageBox\MaterialMessageBox.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DocumentationFile>C:\Users\gigas\Documents\Visual Studio 2019\Projects\MaterialMessageBox\MaterialMessageBox\MaterialMessageBox.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
