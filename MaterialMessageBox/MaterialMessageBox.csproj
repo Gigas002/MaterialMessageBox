@@ -4,8 +4,8 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <LangVersion>preview</LangVersion>
-    <AssemblyVersion>1.0.0.57</AssemblyVersion>
-    <FileVersion>1.0.0.57</FileVersion>
+    <AssemblyVersion>1.0.0.60</AssemblyVersion>
+    <FileVersion>1.0.0.60</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

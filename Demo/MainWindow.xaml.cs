@@ -16,7 +16,7 @@ namespace Demo
         {
             await
                 MaterialMessageBoxUserControl
-                    .Show("This is a simple message\n\nIs\'nt it cool\n.\n.\n" + "You could even scroll!!!\nd\no\no\no\no\no\nw\nn",
+                    .ShowAsync("This is a simple message\n\nIs\'nt it cool\n.\n.\n" + "You could even scroll!!!\nd\no\no\no\no\no\nw\nn",
                           false);
         }
 
@@ -48,8 +48,8 @@ namespace Demo
             TxtResult.Text = $"Message Box Result is: {materialMessageBoxWindow.Result}";
         }
 
-        private async void ShowSimpleRTLMessageBox_OnClick(object sender, RoutedEventArgs e) =>
-            await MaterialMessageBoxUserControl.Show(
+        private void ShowSimpleRTLMessageBox_OnClick(object sender, RoutedEventArgs e) =>
+            MaterialMessageBoxUserControl.Show(
                 $"This is a simple message{Environment.NewLine}هذه رسالة بسيطة{Environment.NewLine}{Environment.NewLine}"
               + "Is'nt it cool\n.\n.\nYou could even scroll!!!\nd\no\no\no\no\no\nw\nn", false, true);
     }

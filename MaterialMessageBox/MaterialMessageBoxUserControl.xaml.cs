@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using MaterialDesignThemes.Wpf;
 
 // ReSharper disable InheritdocConsiderUsage
@@ -51,92 +52,166 @@ namespace MaterialMessageBox
 
         #region Static methods
 
+        #region Async
+
         /// <summary>
         /// Shows usual message box.
         /// </summary>
         /// <param name="message">The message to display.</param>
-        /// <param name="isCancel">Is cancel button visible?</param>
-        /// <param name="isRightToLeft">(Optional) Is <see cref="FlowDirection"/>=<see cref="FlowDirection.RightToLeft"/>?</param>
-        /// <returns><see cref="MessageBoxResult"/>.
-        /// <para>Also returns <see cref="MessageBoxResult.Cancel"/> if <see cref="Exception"/> is thrown.</para></returns>
-        public static async ValueTask<MessageBoxResult> Show(string message, bool isCancel, bool isRightToLeft = false)
+        /// <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <param name="isRightToLeft">(Optional) Is <see cref="FlowDirection"/>=<see cref="FlowDirection.RightToLeft"/>?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <returns><see cref="MessageBoxResult"/>.</returns>
+        public static async ValueTask<MessageBoxResult> ShowAsync(string message, bool isCancelButtonVisible = false,
+                                                                  bool isRightToLeft = false)
         {
-            try
+            MaterialMessageBoxUserControl materialMessageBoxUserControl = new MaterialMessageBoxUserControl
             {
-                MaterialMessageBoxUserControl mbc = new MaterialMessageBoxUserControl();
-                mbc.MessageTextBlock.Text = message;
-                mbc.CancelButton.Visibility = isCancel ? Visibility.Visible : Visibility.Collapsed;
-                mbc.FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
-                mbc.OkButton.Focus();
-                //mbc.ShowDialog();
-                await DialogHost.Show(mbc);
-                return mbc.Result == MessageBoxResult.OK ? MessageBoxResult.OK : MessageBoxResult.Cancel;
-            }
-            catch (Exception)
-            {
-                return MessageBoxResult.Cancel;
-            }
+                MessageTextBlock = { Text = message },
+                CancelButton = { Visibility = isCancelButtonVisible ? Visibility.Visible : Visibility.Collapsed },
+                FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight
+            };
+            materialMessageBoxUserControl.OkButton.Focus();
+            await DialogHost.Show(materialMessageBoxUserControl).ConfigureAwait(false);
+
+            return materialMessageBoxUserControl.Result;
         }
 
         /// <summary>
-        /// Shows an error message box.
+        /// Shows error message box.
         /// </summary>
-        /// <param name="errorMessage">The error error message to display.</param>
-        /// <param name="isCancel">Is cancel button visible?</param>
-        /// <param name="isRightToLeft">(Optional) Is <see cref="FlowDirection"/>=<see cref="FlowDirection.RightToLeft"/>?</param>
-        /// <returns>Message box result. <see cref="MessageBoxResult.Cancel"/> if <see cref="Exception"/> is thrown.</returns>
-        public static MessageBoxResult ShowError(string errorMessage, bool isCancel, bool isRightToLeft = false)
+        /// <param name="message">The error message to display.</param>
+        /// <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <param name="isRightToLeft">(Optional) Is <see cref="FlowDirection"/>=<see cref="FlowDirection.RightToLeft"/>?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <returns><see cref="MessageBoxResult"/>.</returns>
+        public static async ValueTask<MessageBoxResult> ShowErrorAsync(string message,
+                                                                       bool isCancelButtonVisible = false,
+                                                                       bool isRightToLeft = false)
         {
-            //try
-            //{
-            //    using (MessageBoxWindow messageBoxWindow = new MessageBoxWindow())
-            //    {
-            //        messageBoxWindow.BorderBrush = Brushes.Red;
-            //        messageBoxWindow.BorderThickness = new Thickness(2, 2, 2, 2);
+            MaterialMessageBoxUserControl materialMessageBoxUserControl = new MaterialMessageBoxUserControl
+            {
+                BorderBrush = Brushes.Red, BorderThickness = new Thickness(2, 2, 2, 2),
+                MessageTextBlock = { Text = message },
+                CancelButton = { Visibility = isCancelButtonVisible ? Visibility.Visible : Visibility.Collapsed },
+                FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight
+            };
 
-            //        messageBoxWindow.MessageTextBlock.Text = errorMessage;
-            //        messageBoxWindow.CancelButton.Visibility = isCancel ? Visibility.Visible : Visibility.Collapsed;
-            //        messageBoxWindow.FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
-            //        messageBoxWindow.OkButton.Focus();
-            //        messageBoxWindow.ShowDialog();
-            //        return messageBoxWindow.Result == MessageBoxResult.OK ? MessageBoxResult.OK : MessageBoxResult.Cancel;
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            return MessageBoxResult.Cancel;
-            //}
+            materialMessageBoxUserControl.OkButton.Focus();
+            await DialogHost.Show(materialMessageBoxUserControl).ConfigureAwait(false);
+
+            return materialMessageBoxUserControl.Result;
         }
 
         /// <summary>
-        /// Shows a warning message box.
+        /// Shows warning message box.
         /// </summary>
-        /// <param name="warningMessage">The warning message to display.</param>
-        /// <param name="isCancel">Is cancel button visible?</param>
-        /// <param name="isRightToLeft">(Optional) Is <see cref="FlowDirection"/>=<see cref="FlowDirection.RightToLeft"/>?</param>
-        /// <returns>Message box result. <see cref="MessageBoxResult.Cancel"/> if <see cref="Exception"/> is thrown.</returns>
-        public static MessageBoxResult ShowWarning(string warningMessage, bool isCancel, bool isRightToLeft = false)
+        /// <param name="message">The warning message to display.</param>
+        /// <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <param name="isRightToLeft">(Optional) Is <see cref="FlowDirection"/>=<see cref="FlowDirection.RightToLeft"/>?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <returns><see cref="MessageBoxResult"/>.</returns>
+        public static async ValueTask<MessageBoxResult> ShowWarningAsync(
+            string message, bool isCancelButtonVisible = false, bool isRightToLeft = false)
         {
-            //try
-            //{
-            //    using (MessageBoxWindow messageBoxWindow = new MessageBoxWindow())
-            //    {
-            //        messageBoxWindow.BorderBrush = Brushes.Orange;
-            //        messageBoxWindow.BorderThickness = new Thickness(2, 2, 2, 2);
+            MaterialMessageBoxUserControl materialMessageBoxUserControl = new MaterialMessageBoxUserControl
+            {
+                BorderBrush = Brushes.Orange, BorderThickness = new Thickness(2, 2, 2, 2),
+                MessageTextBlock = { Text = message },
+                CancelButton = { Visibility = isCancelButtonVisible ? Visibility.Visible : Visibility.Collapsed },
+                FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight
+            };
 
-            //        messageBoxWindow.MessageTextBlock.Text = warningMessage;
-            //        messageBoxWindow.CancelButton.Visibility = isCancel ? Visibility.Visible : Visibility.Collapsed;
-            //        messageBoxWindow.FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
-            //        messageBoxWindow.OkButton.Focus();
-            //        messageBoxWindow.ShowDialog();
-            //        return messageBoxWindow.Result == MessageBoxResult.OK ? MessageBoxResult.OK : MessageBoxResult.Cancel;
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            return MessageBoxResult.Cancel;
-            //}
+            materialMessageBoxUserControl.OkButton.Focus();
+            await DialogHost.Show(materialMessageBoxUserControl).ConfigureAwait(false);
+
+            return materialMessageBoxUserControl.Result;
         }
+
+        #endregion
+
+        #region Sync
+
+        /// <summary>
+        /// Shows usual message box.
+        /// </summary>
+        /// <param name="message">The message to display.</param>
+        /// <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <param name="isRightToLeft">(Optional) Is <see cref="FlowDirection"/>=<see cref="FlowDirection.RightToLeft"/>?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <returns><see cref="MessageBoxResult"/>.</returns>
+        public static MessageBoxResult Show(string message, bool isCancelButtonVisible = false,
+                                            bool isRightToLeft = false)
+        {
+            MaterialMessageBoxUserControl materialMessageBoxUserControl = new MaterialMessageBoxUserControl
+            {
+                MessageTextBlock = { Text = message },
+                CancelButton = { Visibility = isCancelButtonVisible ? Visibility.Visible : Visibility.Collapsed },
+                FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight
+            };
+            materialMessageBoxUserControl.OkButton.Focus();
+            DialogHost.Show(materialMessageBoxUserControl);
+
+            return materialMessageBoxUserControl.Result;
+        }
+
+        /// <summary>
+        /// Shows error message box.
+        /// </summary>
+        /// <param name="message">The error message to display.</param>
+        /// <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <param name="isRightToLeft">(Optional) Is <see cref="FlowDirection"/>=<see cref="FlowDirection.RightToLeft"/>?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <returns><see cref="MessageBoxResult"/>.</returns>
+        public static MessageBoxResult ShowError(string message, bool isCancelButtonVisible = false,
+                                                 bool isRightToLeft = false)
+        {
+            MaterialMessageBoxUserControl materialMessageBoxUserControl = new MaterialMessageBoxUserControl
+            {
+                BorderBrush = Brushes.Red, BorderThickness = new Thickness(2, 2, 2, 2),
+                MessageTextBlock = { Text = message },
+                CancelButton = { Visibility = isCancelButtonVisible ? Visibility.Visible : Visibility.Collapsed },
+                FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight
+            };
+
+            materialMessageBoxUserControl.OkButton.Focus();
+            DialogHost.Show(materialMessageBoxUserControl);
+
+            return materialMessageBoxUserControl.Result;
+        }
+
+        /// <summary>
+        /// Shows warning message box.
+        /// </summary>
+        /// <param name="message">The warning message to display.</param>
+        /// <param name="isCancelButtonVisible">(Optional) Is cancel button visible?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <param name="isRightToLeft">(Optional) Is <see cref="FlowDirection"/>=<see cref="FlowDirection.RightToLeft"/>?
+        /// <para>By default is <see langword="false"/></para></param>
+        /// <returns><see cref="MessageBoxResult"/>.</returns>
+        public static MessageBoxResult ShowWarning(string message, bool isCancelButtonVisible = false,
+                                                   bool isRightToLeft = false)
+        {
+            MaterialMessageBoxUserControl materialMessageBoxUserControl = new MaterialMessageBoxUserControl
+            {
+                BorderBrush = Brushes.Orange, BorderThickness = new Thickness(2, 2, 2, 2),
+                MessageTextBlock = { Text = message },
+                CancelButton = { Visibility = isCancelButtonVisible ? Visibility.Visible : Visibility.Collapsed },
+                FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight
+            };
+
+            materialMessageBoxUserControl.OkButton.Focus();
+            DialogHost.Show(materialMessageBoxUserControl);
+
+            return materialMessageBoxUserControl.Result;
+        }
+
+        #endregion
 
         #endregion
     }
