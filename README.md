@@ -12,7 +12,7 @@ You can build project in **VS2019** (**16.2.4**+) or in **VSCode** (**1.38.0**+)
 
 ##  Current version
 
-*todo releases and nuget badges*
+[![Release](https://img.shields.io/github/release/Gigas002/MaterialMessageBox.svg)](https://github.com/Gigas002/MaterialMessageBox/releases/latest), or on NuGet: *todo*.
 
 Information about changes since previous releases can be found in [changelog](https://github.com/Gigas002/MaterialMessageBox/blob/master/CHANGELOG.md). This project supports [SemVer 2.0.0](https://semver.org/) (template is `{MAJOR}.{MINOR}.{PATCH}.{BUILD}`).
 
