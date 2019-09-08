@@ -2,7 +2,7 @@
 
 Library on **.NET Core 3.0** (**preview9**) implementing material design message box in WPF.
 
-Original idea and some code is written by [denpalrius](https://github.com/denpalrius/Material-Message-Box), but I’ve changed some major stuff and decided to make it different repository.
+Original idea and some code is written by [denpalrius](https://github.com/denpalrius/Material-Message-Box), but I’ve changed some major stuff and decided to make it different repository. Text for message boxes in Demo is taken from [here](https://en.wikipedia.org/wiki/Soviet_Union).
 
 You can build project in **VS2019** (**16.2.4**+) or in **VSCode** (**1.38.0**+) with [omnisharp-vscode](https://github.com/OmniSharp/omnisharp-vscode) extension (**1.21.2**+).
 
@@ -117,7 +117,37 @@ await DialogHost.Show(materialMessageBoxUserControl);
 
 ## Screenshots
 
-*todo*
+Usual Window
+
+![UsualWindow](Screenshots/UsualWindow.png)
+
+Usual UserControl
+
+![UsualUserControl](Screenshots/UsualUserControl.png)
+
+Custom Window
+
+![CustomWindow](Screenshots/CustomWindow.png)
+
+Custom UserControl
+
+![CustomUserControl](Screenshots/CustomUserControl.png)
+
+Error Window
+
+![ErrorWindow](Screenshots/ErrorWindow.png)
+
+Error UserControl
+
+![ErrorUserControl](Screenshots/ErrorUserControl.png)
+
+Warning Window
+
+![WarningWindow](Screenshots/WarningWindow.png)
+
+Warning UserControl
+
+![WarningUserControl](Screenshots/WarningUserControl.png)
 
 ## Contributing
 

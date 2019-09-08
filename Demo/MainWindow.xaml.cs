@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
 using MaterialDesignThemes.Wpf;
@@ -13,6 +14,10 @@ namespace Demo
     /// </summary>
     internal sealed partial class MainWindow
     {
+        public string Copyright { get; set; } = "© Gigas002 2019";
+
+        public string Version { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+
         public MainWindow() => InitializeComponent();
 
         private string MessageBoxMessage { get; } =
