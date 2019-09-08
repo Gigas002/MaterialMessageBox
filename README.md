@@ -10,9 +10,9 @@ You can build project in **VS2019** (**16.2.4**+) or in **VSCode** (**1.38.0**+)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/iaiarsuu9xlwiu1a?svg=true)](https://ci.appveyor.com/project/Gigas002/materialmessagebox)
 
-##  Current version
+## Current version
 
-[![Release](https://img.shields.io/github/release/Gigas002/MaterialMessageBox.svg)](https://github.com/Gigas002/MaterialMessageBox/releases/latest), or on NuGet: 
+Get latest version on releases page: [![Release](https://img.shields.io/github/release/Gigas002/MaterialMessageBox.svg)](https://github.com/Gigas002/MaterialMessageBox/releases/latest), or on NuGet:
 
 Windows x86: [![NuGet](https://img.shields.io/nuget/v/MaterialMessageBox-x86.svg)](https://www.nuget.org/packages/MaterialMessageBox-x86/)
 
@@ -63,13 +63,13 @@ But also you can create `MaterialMessageBoxWindow` object and rewrite some stuff
 ```c#
 MaterialMessageBoxWindow materialMessageBoxWindow = new MaterialMessageBoxWindow
 {
-	MessageTextBlock = { Text = MessageBoxMessage, Foreground = Brushes.Yellow },
-	CopyToClipboardButton = { Visibility = Visibility.Hidden },
-	OkButton = { Content = "Good", Foreground = Brushes.Yellow, Background = Brushes.LightCoral},
-	CancelButton = { Content = "Bad", Foreground = Brushes.Blue, Background = Brushes.LightBlue},
-	BordersGrid = { Background = Brushes.IndianRed },
-	MainGrid = { Background = Brushes.Red }, BorderBrush = Brushes.DarkRed,
-	BorderThickness = new Thickness(4, 4, 4, 4)
+    MessageTextBlock = { Text = MessageBoxMessage, Foreground = Brushes.Yellow },
+    CopyToClipboardButton = { Visibility = Visibility.Hidden },
+    OkButton = { Content = "Good", Foreground = Brushes.Yellow, Background = Brushes.LightCoral},
+    CancelButton = { Content = "Bad", Foreground = Brushes.Blue, Background = Brushes.LightBlue},
+    BordersGrid = { Background = Brushes.IndianRed },
+    MainGrid = { Background = Brushes.Red }, BorderBrush = Brushes.DarkRed,
+    BorderThickness = new Thickness(4, 4, 4, 4)
 };
 materialMessageBoxWindow.ShowDialog();
 ```
@@ -107,14 +107,14 @@ And of course you can also create `MaterialMessageBoxUserControl` object, but no
 ```c#
 MaterialMessageBoxUserControl materialMessageBoxUserControl = new MaterialMessageBoxUserControl
 {
-	MessageTextBlock = { Text = MessageBoxMessage, Foreground = Brushes.Yellow },
-	CopyToClipboardButton = { Visibility = Visibility.Hidden },
-	OkButton = { Content = "Good", Foreground = Brushes.Yellow, Background = Brushes.LightCoral },
-	CancelButton = { Content = "Bad", Foreground = Brushes.Blue, Background = Brushes.LightBlue },
-	BordersGrid = { Background = Brushes.IndianRed },
-	MainGrid = { Background = Brushes.Red },
-	BorderBrush = Brushes.DarkRed,
-	BorderThickness = new Thickness(4, 4, 4, 4)
+    MessageTextBlock = { Text = MessageBoxMessage, Foreground = Brushes.Yellow },
+    CopyToClipboardButton = { Visibility = Visibility.Hidden },
+    OkButton = { Content = "Good", Foreground = Brushes.Yellow, Background = Brushes.LightCoral },
+    CancelButton = { Content = "Bad", Foreground = Brushes.Blue, Background = Brushes.LightBlue },
+    BordersGrid = { Background = Brushes.IndianRed },
+    MainGrid = { Background = Brushes.Red },
+    BorderBrush = Brushes.DarkRed,
+    BorderThickness = new Thickness(4, 4, 4, 4)
 };
 await DialogHost.Show(materialMessageBoxUserControl);
 ```
