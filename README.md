@@ -6,7 +6,7 @@ Original idea and some code is written by [denpalrius](https://github.com/denpal
 
 You can build project in **VS2019** (**16.2.4**+) or in **VSCode** (**1.38.0**+) with [omnisharp-vscode](https://github.com/OmniSharp/omnisharp-vscode) extension (**1.21.2**+).
 
-*todo icon*
+![Icon](icon.png)
 
 *todo appveyor badge*
 
