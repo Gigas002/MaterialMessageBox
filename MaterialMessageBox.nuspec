@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MaterialMessageBox</id>
+    <version>1.0.0</version>
+    <title>MaterialMessageBox x86</title>
+    <authors>Gigas002</authors>
+    <owners>Gigas002</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://www.wtfpl.net/</licenseUrl>
+    <projectUrl>https://github.com/Gigas002/MaterialMessageBox</projectUrl>
+    <description>Material Message Box for WPF apps.</description>
+    <copyright>Gigas002</copyright>
+    <tags>wpf messagebox materialdesign material-ui desktop</tags>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.0">
+        <dependency id="MaterialDesignThemes" version="3.0.0-ci534" />
+        <dependency id="MaterialDesignColors" version="1.2.1-ci534" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="MaterialMessageBox\bin\Release\MaterialMessageBox.dll" target="lib\NETCoreApp3.0\MaterialMessageBox.dll" />
+    <file src="MaterialMessageBox\bin\Release\MaterialMessageBox.xml" target="lib\NETCoreApp3.0\MaterialMessageBox.xml" />
+  </files>
+</package>

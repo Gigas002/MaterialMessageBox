@@ -7,7 +7,7 @@
     <AssemblyVersion>1.0.0.72</AssemblyVersion>
     <FileVersion>1.0.0.72</FileVersion>
     <Platforms>AnyCPU;x64</Platforms>
-    <ApplicationIcon>Icon\icon.ico</ApplicationIcon>
+    <ApplicationIcon></ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
