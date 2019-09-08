@@ -14,9 +14,9 @@ You can build project in **VS2019** (**16.2.4**+) or in **VSCode** (**1.38.0**+)
 
 [![Release](https://img.shields.io/github/release/Gigas002/MaterialMessageBox.svg)](https://github.com/Gigas002/MaterialMessageBox/releases/latest), or on NuGet: 
 
-[![NuGet](https://img.shields.io/nuget/v/MaterialMessageBox-x86.svg)](https://www.nuget.org/packages/MaterialMessageBox-x86/)
+Windows x86: [![NuGet](https://img.shields.io/nuget/v/MaterialMessageBox-x86.svg)](https://www.nuget.org/packages/MaterialMessageBox-x86/)
 
-[![NuGet](https://img.shields.io/nuget/v/MaterialMessageBox-x64.svg)](https://www.nuget.org/packages/MaterialMessageBox-x64/)
+Windows x64: [![NuGet](https://img.shields.io/nuget/v/MaterialMessageBox-x64.svg)](https://www.nuget.org/packages/MaterialMessageBox-x64/)
 
 Information about changes since previous releases can be found in [changelog](https://github.com/Gigas002/MaterialMessageBox/blob/master/CHANGELOG.md). This project supports [SemVer 2.0.0](https://semver.org/) (template is `{MAJOR}.{MINOR}.{PATCH}.{BUILD}`).
 
