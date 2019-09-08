@@ -10,6 +10,8 @@ You can build project in **VS2019** (**16.2.4**+) or in **VSCode** (**1.38.0**+)
 
 *todo appveyor badge*
 
+## Current version
+
 *todo releases and nuget badges*
 
 Information about changes since previous releases can be found in [changelog](https://github.com/Gigas002/MaterialMessageBox/blob/master/CHANGELOG.md). This project supports [SemVer 2.0.0](https://semver.org/) (template is `{MAJOR}.{MINOR}.{PATCH}.{BUILD}`).
@@ -28,7 +30,90 @@ Previous versions can be found on [releases](https://github.com/Gigas002/Materia
 
 ## API
 
-*todo*
+Library implements two different kinds of message boxes: **Window** and **UserControl**. See screenshots below to see the difference in design.
+
+To use API, add `using MaterialMessageBox` directive to your classes.
+
+### MaterialMessageBoxWindow
+
+Contains three slightly different static `Show(...)` methods:
+
+```c#
+public static MessageBoxResult Show(string message, bool isCancelButtonVisible = false, bool isRightToLeft = false) {...}
+
+public static MessageBoxResult ShowError(string message, bool isCancelButtonVisible = false, bool isRightToLeft = false) {...}
+
+public static MessageBoxResult ShowWarning(string message, bool isCancelButtonVisible = false, bool isRightToLeft = false) {...}
+```
+
+Which you can call in your code like this:
+
+```c#
+MaterialMessageBoxWindow.Show(MessageBoxMessage);
+MaterialMessageBoxWindow.ShowError(MessageBoxMessage, true, true);
+MaterialMessageBoxWindow.ShowWarning(MessageBoxMessage, true);
+```
+
+But also you can create `MaterialMessageBoxWindow` object and rewrite some stuff for yourself:
+
+```c#
+MaterialMessageBoxWindow materialMessageBoxWindow = new MaterialMessageBoxWindow
+{
+	MessageTextBlock = { Text = MessageBoxMessage, Foreground = Brushes.Yellow },
+	CopyToClipboardButton = { Visibility = Visibility.Hidden },
+	OkButton = { Content = "Good", Foreground = Brushes.Yellow, Background = Brushes.LightCoral},
+	CancelButton = { Content = "Bad", Foreground = Brushes.Blue, Background = Brushes.LightBlue},
+	BordersGrid = { Background = Brushes.IndianRed },
+	MainGrid = { Background = Brushes.Red }, BorderBrush = Brushes.DarkRed,
+	BorderThickness = new Thickness(4, 4, 4, 4)
+};
+materialMessageBoxWindow.ShowDialog();
+```
+
+### MaterialMessageBoxUserControl
+
+To use this, you must specify `DialogHost` in your `.xaml` file.
+
+Code is mostly the same, as in `MaterialMessageBoxWindow`, but there’s also implemented both `Async` and non-`Async` methods:
+
+```c#
+public static async ValueTask<MessageBoxResult> ShowAsync(string message, bool isCancelButtonVisible = false, bool isRightToLeft = false) {...}
+
+public static async ValueTask<MessageBoxResult> ShowErrorAsync(string message, bool isCancelButtonVisible = false, bool isRightToLeft = false) {...}
+
+public static async ValueTask<MessageBoxResult> ShowWarningAsync(string message, bool isCancelButtonVisible = false, bool isRightToLeft = false) {...}
+
+public static MessageBoxResult Show(string message, bool isCancelButtonVisible = false, bool isRightToLeft = false) {...}
+
+public static MessageBoxResult ShowError(string message, bool isCancelButtonVisible = false, bool isRightToLeft = false) {...}
+
+public static MessageBoxResult ShowWarning(string message, bool isCancelButtonVisible = false, bool isRightToLeft = false) {...}
+```
+
+Ways to call it are pretty much the same (don’t forget to make your methods `async` and use `ConfigureAwait`):
+
+```c#
+await MaterialMessageBoxUserControl.ShowAsync(MessageBoxMessage);
+await MaterialMessageBoxUserControl.ShowErrorAsync(MessageBoxMessage, true, true);
+await MaterialMessageBoxUserControl.ShowWarningAsync(MessageBoxMessage, true)
+```
+
+And of course you can also create `MaterialMessageBoxUserControl` object, but note, that **there’s a bit different way to call `Show()` method**:
+
+```c#
+MaterialMessageBoxUserControl materialMessageBoxUserControl = new MaterialMessageBoxUserControl
+{
+	MessageTextBlock = { Text = MessageBoxMessage, Foreground = Brushes.Yellow },
+	CopyToClipboardButton = { Visibility = Visibility.Hidden },
+	OkButton = { Content = "Good", Foreground = Brushes.Yellow, Background = Brushes.LightCoral },
+	CancelButton = { Content = "Bad", Foreground = Brushes.Blue, Background = Brushes.LightBlue },
+	BordersGrid = { Background = Brushes.IndianRed },
+	MainGrid = { Background = Brushes.Red },
+	BorderBrush = Brushes.DarkRed,
+	BorderThickness = new Thickness(4, 4, 4, 4)
+};
+await DialogHost.Show(materialMessageBoxUserControl);
+```
 
 ## Screenshots
 

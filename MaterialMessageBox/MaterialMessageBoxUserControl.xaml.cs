@@ -63,7 +63,8 @@ namespace MaterialMessageBox
         /// <param name="isRightToLeft">(Optional) Is <see cref="FlowDirection"/>=<see cref="FlowDirection.RightToLeft"/>?
         /// <para>By default is <see langword="false"/></para></param>
         /// <returns><see cref="MessageBoxResult"/>.</returns>
-        public static async ValueTask<MessageBoxResult> ShowAsync(string message, bool isCancelButtonVisible = false,
+        public static async ValueTask<MessageBoxResult> ShowAsync(string message,
+                                                                  bool isCancelButtonVisible = false,
                                                                   bool isRightToLeft = false)
         {
             MaterialMessageBoxUserControl materialMessageBoxUserControl = new MaterialMessageBoxUserControl
@@ -114,8 +115,9 @@ namespace MaterialMessageBox
         /// <param name="isRightToLeft">(Optional) Is <see cref="FlowDirection"/>=<see cref="FlowDirection.RightToLeft"/>?
         /// <para>By default is <see langword="false"/></para></param>
         /// <returns><see cref="MessageBoxResult"/>.</returns>
-        public static async ValueTask<MessageBoxResult> ShowWarningAsync(
-            string message, bool isCancelButtonVisible = false, bool isRightToLeft = false)
+        public static async ValueTask<MessageBoxResult> ShowWarningAsync(string message,
+                                                                         bool isCancelButtonVisible = false,
+                                                                         bool isRightToLeft = false)
         {
             MaterialMessageBoxUserControl materialMessageBoxUserControl = new MaterialMessageBoxUserControl
             {

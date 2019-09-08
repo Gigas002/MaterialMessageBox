@@ -72,11 +72,11 @@ namespace Demo
 
         private void ShowWarningMessageBoxWindow_OnClick(object sender, RoutedEventArgs e) =>
             TxtResult.Text =
-                $"Message Box Result is: {MaterialMessageBoxWindow.ShowWarning(MessageBoxMessage, true, true)}";
+                $"Message Box Result is: {MaterialMessageBoxWindow.ShowWarning(MessageBoxMessage, true)}";
 
         private async void ShowWarningMessageBoxUserControl_OnClick(object sender, RoutedEventArgs e) =>
             TxtResult.Text =
-                $"Message Box Result is: {await MaterialMessageBoxUserControl.ShowWarningAsync(MessageBoxMessage, true, true).ConfigureAwait(true)}";
+                $"Message Box Result is: {await MaterialMessageBoxUserControl.ShowWarningAsync(MessageBoxMessage, true).ConfigureAwait(true)}";
 
         #endregion
     }
