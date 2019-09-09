@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Media;
 
 // ReSharper disable InheritdocConsiderUsage
@@ -39,11 +38,9 @@ namespace MaterialMessageBox
 
         private void CopyToClipboardButton_OnClick(object sender, RoutedEventArgs e)
         {
-            try { Clipboard.SetText(MessageTextBlock.Text); }
-            catch (ArgumentNullException)
-            {
-                // ignored
-            }
+            if (string.IsNullOrWhiteSpace(MessageTextBlock.Text)) return;
+
+            Clipboard.SetText(MessageTextBlock.Text);
         }
 
         #endregion
