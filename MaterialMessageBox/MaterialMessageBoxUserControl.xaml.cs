@@ -29,13 +29,13 @@ namespace MaterialMessageBox
         private void OkButton_OnClick(object sender, RoutedEventArgs e)
         {
             Result = MessageBoxResult.OK;
-            DialogHost.CloseDialogCommand.Execute(true, null);
+            DialogHost.CloseDialogCommand.Execute(null, null);
         }
 
         private void CancelButton_OnClick(object sender, RoutedEventArgs e)
         {
             Result = MessageBoxResult.Cancel;
-            DialogHost.CloseDialogCommand.Execute(false, null);
+            DialogHost.CloseDialogCommand.Execute(null, null);
         }
 
         private void CopyToClipboardButton_OnClick(object sender, RoutedEventArgs e)
