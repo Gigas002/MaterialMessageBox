@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
-    <LangVersion>preview</LangVersion>
     <AssemblyVersion>1.0.0.80</AssemblyVersion>
     <FileVersion>1.0.0.80</FileVersion>
     <Platforms>AnyCPU;x64</Platforms>

@@ -8,6 +8,7 @@
     <FileVersion>1.0.0.121</FileVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationIcon>Icon\icon.ico</ApplicationIcon>
+    <StartupObject>Demo.App</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
