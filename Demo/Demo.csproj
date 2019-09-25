@@ -4,8 +4,8 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
-    <AssemblyVersion>1.0.0.121</AssemblyVersion>
-    <FileVersion>1.0.0.121</FileVersion>
+    <AssemblyVersion>1.0.1.4</AssemblyVersion>
+    <FileVersion>1.0.1.4</FileVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationIcon>Icon\icon.ico</ApplicationIcon>
     <StartupObject>Demo.App</StartupObject>
