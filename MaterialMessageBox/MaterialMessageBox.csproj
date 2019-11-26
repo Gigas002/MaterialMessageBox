@@ -18,7 +18,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MaterialDesignColors" Version="1.2.1-ci607" />
+    <PackageReference Include="MaterialDesignColors" Version="1.2.1-ci802" />
     <PackageReference Include="MaterialDesignThemes" Version="3.0.0-ci607" />
   </ItemGroup>
 
