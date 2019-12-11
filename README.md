@@ -8,7 +8,7 @@ You can build project in **VS2019** (**16.4.1**+) or in **VSCode** (**1.40.2**+)
 
 ![Icon](icon.png)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/iaiarsuu9xlwiu1a?svg=true)](https://ci.appveyor.com/project/Gigas002/materialmessagebox)[![Actions Status](https://github.com/Gigas002/MaterialMessageBox/workflows/.NET%20Core/badge.svg) ](https://github.com/Gigas002/MaterialMessageBox/actions) 
+[![Build status](https://ci.appveyor.com/api/projects/status/iaiarsuu9xlwiu1a?svg=true)](https://ci.appveyor.com/project/Gigas002/materialmessagebox) [![Actions Status](https://github.com/Gigas002/MaterialMessageBox/workflows/.NET%20Core/badge.svg) ](https://github.com/Gigas002/MaterialMessageBox/actions) 
 
 ## Current version
 
