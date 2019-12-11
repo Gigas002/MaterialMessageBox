@@ -1,12 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
-    <AssemblyVersion>1.0.1.4</AssemblyVersion>
-    <FileVersion>1.0.1.4</FileVersion>
+    <AssemblyVersion>1.0.1.6</AssemblyVersion>
+    <FileVersion>1.0.1.6</FileVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationIcon></ApplicationIcon>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <Authors>Gigas002</Authors>
+    <Description>Material Message Box for WPF apps.</Description>
+    <Copyright>Copyright © Gigas002 2019</Copyright>
+    <PackageLicenseExpression>WTFPL</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Gigas002/MaterialMessageBox</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Gigas002/MaterialMessageBox</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>wpf messagebox materialdesign material-ui desktop</PackageTags>
+    <PackageReleaseNotes>https://github.com/Gigas002/MaterialMessageBox/blob/master/CHANGELOG.md</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -18,8 +29,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MaterialDesignColors" Version="1.2.1-ci607" />
-    <PackageReference Include="MaterialDesignThemes" Version="3.0.0-ci607" />
+    <PackageReference Include="MaterialDesignColors" Version="1.2.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.0.0" />
   </ItemGroup>
 
 </Project>
