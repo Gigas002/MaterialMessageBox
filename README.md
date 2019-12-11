@@ -1,14 +1,14 @@
 # MaterialMessageBox
 
-Library on **.NET Core 3.0** implementing material design message box in WPF.
+Library on **.NET Core 3.1** implementing material design message box in WPF.
 
 Original idea and some code is written by [denpalrius](https://github.com/denpalrius/Material-Message-Box), but I’ve changed some major stuff and decided to make it different repository. Text for message boxes in Demo is taken from [here](https://en.wikipedia.org/wiki/Soviet_Union). Icon is taken from [here](https://material.io/resources/icons/?search=message&icon=message&style=baseline).
 
-You can build project in **VS2019** (**16.3.0**+) or in **VSCode** (**1.38.1**+) with [omnisharp-vscode](https://github.com/OmniSharp/omnisharp-vscode) extension (**1.21.3**+).
+You can build project in **VS2019** (**16.4.1**+) or in **VSCode** (**1.40.2**+) with [omnisharp-vscode](https://github.com/OmniSharp/omnisharp-vscode) extension (**1.21.8**+).
 
 ![Icon](icon.png)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/iaiarsuu9xlwiu1a?svg=true)](https://ci.appveyor.com/project/Gigas002/materialmessagebox)[![Actions Status](https://github.com/Gigas002/MaterialMessageBox/workflows/.NET%20Core/badge.svg)](https://github.com/Gigas002/MaterialMessageBox/actions) 
+[![Build status](https://ci.appveyor.com/api/projects/status/iaiarsuu9xlwiu1a?svg=true)](https://ci.appveyor.com/project/Gigas002/materialmessagebox)[![Actions Status](https://github.com/Gigas002/MaterialMessageBox/workflows/.NET%20Core/badge.svg) ](https://github.com/Gigas002/MaterialMessageBox/actions) 
 
 ## Current version
 
@@ -25,12 +25,12 @@ Previous versions can be found on [releases](https://github.com/Gigas002/Materia
 ## Requirements
 
 - Windows 7 or newer;
-- .NET Core 3.0;
+- .NET Core 3.1;
 
 ## Dependencies
 
-- [MaterialDesignThemes](https://www.nuget.org/packages/MaterialDesignThemes) – 3.0.0-ci581;
-- [MaterialDesignColors](https://www.nuget.org/packages/MaterialDesignColors) – 1.2.1-ci581;
+- [MaterialDesignThemes](https://www.nuget.org/packages/MaterialDesignThemes) – 3.0.0;
+- [MaterialDesignColors](https://www.nuget.org/packages/MaterialDesignColors) – 1.2.1;
 
 ## API
 

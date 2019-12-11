@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>MaterialMessageBox-x86</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>MaterialMessageBox-x86</title>
     <authors>Gigas002</authors>
     <owners>Gigas002</owners>
@@ -13,14 +13,14 @@
     <copyright>Gigas002</copyright>
     <tags>wpf messagebox materialdesign material-ui desktop</tags>
     <dependencies>
-      <group targetFramework=".NETCoreApp3.0">
-        <dependency id="MaterialDesignThemes" version="3.0.0-ci534" />
-        <dependency id="MaterialDesignColors" version="1.2.1-ci534" />
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="MaterialDesignThemes" version="3.0.0" />
+        <dependency id="MaterialDesignColors" version="1.2.1" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="MaterialMessageBox\bin\Release\netcoreapp3.0\MaterialMessageBox.dll" target="lib\NETCoreApp3.0\MaterialMessageBox.dll" />
-    <file src="MaterialMessageBox\bin\Release\netcoreapp3.0\MaterialMessageBox.xml" target="lib\NETCoreApp3.0\MaterialMessageBox.xml" />
+    <file src="MaterialMessageBox\bin\Release\netcoreapp3.1\MaterialMessageBox.dll" target="lib\NETCoreApp3.1\MaterialMessageBox.dll" />
+    <file src="MaterialMessageBox\bin\Release\netcoreapp3.1\MaterialMessageBox.xml" target="lib\NETCoreApp3.1\MaterialMessageBox.xml" />
   </files>
 </package>
