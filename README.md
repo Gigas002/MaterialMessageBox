@@ -29,8 +29,8 @@ Previous versions can be found on [releases](https://github.com/Gigas002/Materia
 
 ## Dependencies
 
-- [MaterialDesignThemes](https://www.nuget.org/packages/MaterialDesignThemes) – 3.0.0;
-- [MaterialDesignColors](https://www.nuget.org/packages/MaterialDesignColors) – 1.2.1;
+- [MaterialDesignThemes](https://www.nuget.org/packages/MaterialDesignThemes) – 3.0.1;
+- [MaterialDesignColors](https://www.nuget.org/packages/MaterialDesignColors) – 1.2.2;
 
 ## API
 
