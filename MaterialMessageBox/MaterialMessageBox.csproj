@@ -30,7 +30,7 @@
 
   <ItemGroup>
     <PackageReference Include="MaterialDesignColors" Version="1.2.2" />
-    <PackageReference Include="MaterialDesignThemes" Version="3.0.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.1.0" />
   </ItemGroup>
 
 </Project>
